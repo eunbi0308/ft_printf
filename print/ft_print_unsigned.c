@@ -42,8 +42,8 @@ int ft_print_unsigned(unsigned int n)
         write(1, "0", 1);
     else
     {
-        unsigned_num = ft_unisgned_itoa(n);
-        len = len + ft_print_str(unsigned_num);
+        unsigned_num = ft_unsigned_itoa(n);
+        len = len + ft_print_string(unsigned_num);
         free(unsigned_num);
     }
     return (len);

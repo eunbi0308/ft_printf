@@ -1,3 +1,5 @@
+##In Docker execute command is "docker compose run --rm maker"
+
 NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
@@ -22,12 +24,13 @@ $(NAME):	$(OBJ)
 			cp libft/libft.a .
 			mv libft.a $(NAME)
 
-$(OBJ_DIR)%.o:	mkdir -p $(OBJ_DIR)
-				$(PRINT_DIR)%.c | $(OBJF)
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)%.o: $(PRINT_DIR)%.c | $(OBJ_DIR)
 				$(CC) $(CFLAGS) $(HEADERS) -c $< -o $@
 
 clean:
-		rm -f $(OBJF)
 		rm -rf $(OBJ_DIR)
 		make clean -C $(LIBFT)
 

@@ -1,5 +1,5 @@
 #include "../headers/ft_printf.h"
-#include "libft.h"
+#include "../headers/libft.h"
 
 int ft_print_number(int n)
 {

@@ -1,5 +1,10 @@
 #include "../headers/ft_printf.h"
 
+void ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
 int ft_hex_len(unsigned int num)
 {
     int len;
@@ -41,5 +46,5 @@ int ft_print_hex(unsigned int num, const char format)
         return (write(1,"0",1));
     else
         ft_put_hex(num, format);
-    return (ft_hex_len);
+    return (ft_hex_len(num));
 }

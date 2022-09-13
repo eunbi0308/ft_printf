@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  maker:
+      build:
+        context: .
+      working_dir: "/srv"
+      volumes:
+          - ".:/srv"
+
+  bash:
+      build:
+        context: .
+      working_dir: "/srv"
+      volumes:
+          - ".:/srv"
+      entrypoint: "sh"

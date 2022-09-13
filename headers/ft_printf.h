@@ -4,6 +4,7 @@
 #include <stdarg.h> /*for va_list*/
 #include <unistd.h> /*write*/
 #include <inttypes.h> /*uintptr_t*/
+#include <stdlib.h>
 
 int ft_printf(const char *format, ...);
 int ft_formats(va_list args, const char format);
