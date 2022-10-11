@@ -1,3 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strtrim.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:12:24 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:22:28 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	DESCRIPTION
+		strtrim() removes all whitespace characters from the beginning and 
+		the end of a string.
+	RETURN VALUE
+		returns its argument.
+*/
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

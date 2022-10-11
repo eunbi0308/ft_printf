@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_string.c                                  :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:30:30 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:30 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../headers/ft_printf.h"
 
-void ft_putstr(char *str)
+void    ft_putstr(char *str)
 {
     int i;
     

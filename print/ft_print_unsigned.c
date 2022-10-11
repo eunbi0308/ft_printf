@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_unsigned.c                                :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:30:35 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:35 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../headers/ft_printf.h"
 
 int ft_num_len(unsigned int num)
@@ -13,7 +25,7 @@ int ft_num_len(unsigned int num)
     return(len);
 }
 
-char *ft_unsigned_itoa(unsigned int n)
+char    *ft_unsigned_itoa(unsigned int n)
 {
     char            *unsigned_num;
     unsigned int    len;

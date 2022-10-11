@@ -1,7 +1,26 @@
-#include "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_split.c                                         :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:10:04 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 19:46:13 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-static size_t	word_counter(char const *s, char c)
+/* 
+	DESCRIPTION
+		Allocates and returns an array of strings obtained by splitting 's'
+		using the character 'c' as a delimiter. The array must end with a NULL pointer.
+	RETURN VALUE
+		Returns the array of new strings resulting from the split.
+		NULL if the allocation fails.
+*/
+#include "libft.h"
+
+size_t	word_counter(char const *s, char c)
 {
 	size_t	count;
 
@@ -28,7 +47,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	str = (char **)malloc(sizeof(*str) * (word_counter(s, c) + 1));
+	str = (char **)malloc(sizeof(*str) * word_counter(s, c) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -40,15 +59,8 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		if (*(s - 1) != c)
-			str[i++] = ft_substr(start, 0, s - start);
+		str[i++] = ft_substr(start, 0, s - start);
 	}
-	str[i] = NULL;
+	str[i] = 0;
 	return (str);
-}
-
-
-int	main()
-{
-	printf (ft_split("abcba", 'c')[0]);
-	return (0);
 }

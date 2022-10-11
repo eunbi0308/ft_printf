@@ -1,5 +1,3 @@
-##In Docker execute command is "docker compose run --rm maker"
-
 NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
@@ -8,27 +6,26 @@ PRINT_DIR	= print/
 HEADERS		= ./headers
 LIBFT		= libft
 
-FORMATS	= ft_print_char ft_print_hex ft_print_number \
-			ft_print_pointer ft_print_string ft_print_unsigned
+FORMATS	= ft_print_char.c ft_print_hex.c ft_print_number.c \
+			ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
 
-SRC	= $(addprefix $(PRINT_DIR), $(addsuffix .c, $(FORMATS)))
-OBJ	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(FORMATS)))
+OBJ	= $(addprefix $(OBJ_DIR), $(FORMATS:.c=.o))
 
-###
+OBJF = .cache_exists
 
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-			ar rcs $(NAME) $(OBJ)
-			make -C $(LIBFT)
+			ar r $(NAME) $(OBJ)
+			make $(LIBFT)
 			cp libft/libft.a .
 			mv libft.a $(NAME)
 
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
-
 $(OBJ_DIR)%.o: $(PRINT_DIR)%.c | $(OBJ_DIR)
-				$(CC) $(CFLAGS) $(HEADERS) -c $< -o $@
+			@$(CC) $(CFLAGS) $(HEADERS) -c $< -o $@
+
+$(OBJF):
+	@mkdir -p $(OBJ_DIR)
 
 clean:
 		rm -rf $(OBJ_DIR)

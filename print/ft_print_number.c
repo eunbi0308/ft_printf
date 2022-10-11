@@ -1,5 +1,17 @@
-#include "../headers/ft_printf.h"
-#include "../headers/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_number.c                                  :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:30:03 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:03 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include"../headers/ft_printf.h"
+#include"../headers/libft.h"
 
 int ft_print_number(int n)
 {

@@ -1,3 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strmapi.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:11:41 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:11:54 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	DESCRIPTION
+		strmapi() applies the function '*f' to each character of the
+		string '*s' to create a new string (with malloc())
+		resulting from successive applications of '*f'.
+	RETURN VALUE
+		returns the string created from the successive applications of '*f'.
+		Returns NULL if the allocation fails.
+*/
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

@@ -1,3 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strnstr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:12:13 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:21:56 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	DESCRIPTION
+		strnstr() function locates the	first occurrence of '*little' in '*big', 
+		where not more than	len characters are searched.
+		Characters that appear after a `\0' character are not searched.
+	RETURN VALUE
+		If '*little' is an empty string, '*big' is returned.
+		If '*little' occurs nowhere in	'*big', NULL is returned.
+		Otherwise a pointer to the first character of the first occurrence of 
+		'*little' is returned.
+*/
 #include "libft.h"
 #include<limits.h>
 

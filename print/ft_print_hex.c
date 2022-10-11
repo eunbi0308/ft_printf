@@ -1,6 +1,18 @@
-#include "../headers/ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_hex.c                                     :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:29:52 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:29:52 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar(char c)
+#include "ft_printf.h"
+
+void    ft_putchar(char c)
 {
     write(1, &c, 1);
 }
@@ -19,7 +31,7 @@ int ft_hex_len(unsigned int num)
     return (len);
 }
 
-void ft_put_hex(unsigned int num, const char format)
+void    ft_put_hex(unsigned int num, const char format)
 {
     if (num >= 16)
     {

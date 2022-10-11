@@ -1,3 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlcat.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:11:18 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:11:20 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* 
+	DESCRIPTION
+		strlcat() concatenates two strings.
+		strlcat() guarantees that the total length of 
+		the result string will be between the initial length of 'dst' and 'size'. 
+		The zero at the end of the string is included. This function is mainly 
+		used to avoid oversize of the character array.
+	RETURN VALUE
+		returns the total length of the string strlcat() tried to create.
+*/
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

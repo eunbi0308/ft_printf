@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_pointer.c                                 :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:30:23 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 22:14:11 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../headers/ft_printf.h"
 
-void ft_putchar(char c)
+void    ft_putchar(char c)
 {
     write(1, &c, 1);
 }
@@ -18,7 +30,7 @@ int ft_pointer_len(uintptr_t n)
     return(len);
 }
 
-void ft_put_pointer(uintptr_t n)
+void    ft_put_pointer(uintptr_t n)
 {
     if (n >= 16)
     {

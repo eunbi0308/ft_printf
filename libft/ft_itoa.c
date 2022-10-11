@@ -1,3 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_itoa.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:05:38 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:16:56 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+	DESCRIPTION
+		Integer to Character. Dividing interger to get a length for a string.
+		
+	RETURN VALUE
+		returns converted string. 
+*/
 #include "libft.h"
 
 static int	get_len(int n)
@@ -20,10 +39,10 @@ char	*ft_itoa(int n)
 {
 	int			len;
 	char		*str;
-	long long	num;                   
+	long long	num;
 
 	if (n == -2147483648)
-		 return (ft_strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	len = get_len(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)

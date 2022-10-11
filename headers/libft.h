@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   libft.h                                            :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:01:27 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 19:55:35 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include<unistd.h>
-# include<stdlib.h>
-# include <string.h>
+# include<unistd.h>/*write*/
+# include<stdlib.h>/*malloc*/
 
 typedef struct s_list
 {

@@ -1,3 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strjoin.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.42.fr>                  +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/10 16:11:10 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/10 16:11:13 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* 
+	DESCRIPTION
+		strjoin() constructs string by linking '*s1' in '*s2'.
+	RETURN VALUE
+		A pointer of the joined string.
+*/
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

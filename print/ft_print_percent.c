@@ -1,4 +1,16 @@
-#include "../headers/ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_print_percent.c                                 :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: eucho <eucho@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 21:30:14 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:14 by eucho         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include"../headers/ft_printf.h"
 
 int ft_print_percent(void)
 {
