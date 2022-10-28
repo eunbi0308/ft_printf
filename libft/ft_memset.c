@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:09:28 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:18:50 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:28:06 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 	RETURN VALUE
 		Returns a pointer to the memory area 'str'.	
 */
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memset(void *str, int c, size_t n)
 {

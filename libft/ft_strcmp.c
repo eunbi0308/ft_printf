@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:10:16 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:10:18 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:31:24 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 		Returns positive if s1 > s2
 		Returns negative if s1 < s2
 */
-#include "libft.h"
+#include <stdlib.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

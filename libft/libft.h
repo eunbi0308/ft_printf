@@ -6,15 +6,14 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:01:27 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/11 19:55:35 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 11:41:09 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include<unistd.h>/*write*/
-# include<stdlib.h>/*malloc*/
+# include <stdlib.h>
 
 typedef struct s_list
 {

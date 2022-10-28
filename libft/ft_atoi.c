@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:01:55 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:02:36 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:22:42 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 	RETUTRN VALUE
 		returns converted integral number.
 */
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

@@ -1,41 +1,41 @@
 NAME		= libftprintf.a
+
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 OBJ_DIR		= obj/
-PRINT_DIR	= print/
-HEADERS		= ./headers
+PRINT_DIR	= print
 LIBFT		= libft
 
-FORMATS	= ft_print_char.c ft_print_hex.c ft_print_number.c \
-			ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
+FORMATS	= ft_print_char.c ft_print_hex.c ft_print_number.c ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
 
 OBJ	= $(addprefix $(OBJ_DIR), $(FORMATS:.c=.o))
 
-OBJF = .cache_exists
+OBJF =	.cache_exists
 
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-			ar r $(NAME) $(OBJ)
-			make $(LIBFT)
-			cp libft/libft.a .
-			mv libft.a $(NAME)
+			@cd ./$(LIBFT) && make
+			@echo "-- Libft is compiled --"
+			@cp $(LIBFT)/libft.a .
+			@mv libft.a $(NAME)
+			@ar -rcs $(NAME) $(OBJ)
+			@echo "-- Printf is compiled --"
 
-$(OBJ_DIR)%.o: $(PRINT_DIR)%.c | $(OBJ_DIR)
-			@$(CC) $(CFLAGS) $(HEADERS) -c $< -o $@
+$(OBJ_DIR)%.o: %.c | $(OBJF)
+			$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJF):
-	@mkdir -p $(OBJ_DIR)
+		@mkdir -p $(OBJ_DIR)
 
 clean:
-		rm -rf $(OBJ_DIR)
-		make clean -C $(LIBFT)
+		@rm -rf $(OBJ_DIR)
+		@make clean -C $(LIBFT)
 
 fclean: clean
-		rm -f $(NAME)
-		rm -f $(LIBFT)/libft.a
+		@rm -f $(NAME)
+		@rm -f $(LIBFT)/libft.a
 
 re:	fclean all
 
-norm: 
-	@norminette $(FORMATS) $(LIBFT) | grep -v Norme -B1 || true
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:29 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:22:37 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 10:21:30 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,24 @@
 		returns the specified substring.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;
+	size_t	s_len;
 
 	i = 0;
-	if (s == 0)
+	s_len = ft_strlen(s);
+	if (s == 0 || (s_len - start) < 0)
 		return (NULL);
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
+	if (len > s_len)
+		len = s_len;
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	while (start + i < ft_strlen(s) && i < len)
+	while (start + i < s_len && i < len)
 	{
 		str[i] = s[start + i];
 		i++;

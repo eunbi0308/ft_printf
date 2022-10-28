@@ -6,20 +6,19 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:08:48 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:08:51 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:27:52 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	DESCRIPTION
 		memcmp() compares 2 strings as n nytes.
-	
 	RETURN VALUE
 		'*s1' < '*s2' :  Negative
 		'*s1' > '*s2' :  Positive
 		'*s1' = '*s2' :  0
 */
-#include "libft.h"
+#include <stdlib.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

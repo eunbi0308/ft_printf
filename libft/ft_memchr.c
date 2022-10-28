@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:08:42 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:17:30 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:27:43 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 		Returns pointer or NULL if the character does not occure 
 		in the given memory area.
 */
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

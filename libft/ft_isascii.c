@@ -6,11 +6,9 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:05:09 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:16:12 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:25:15 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

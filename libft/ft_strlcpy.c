@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:11:26 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:21:07 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 11:05:59 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 		and finally call strlcpy() a second time to do the required copy.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -33,8 +34,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	len = ft_strlen(src);
-	if (!dst || !src)
-		return (0);
 	if (size > 0)
 	{
 		while (i < len && i < size - 1)

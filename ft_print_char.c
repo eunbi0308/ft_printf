@@ -9,11 +9,10 @@
 /*   Updated: 2022/10/11 21:57:19 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include "../headers/ft_printf.h"
-
-int ft_print_char(int c)
+int	ft_print_char(int c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }

@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_print_number.c                                  :+:    :+:            */
+/*   ft_print_string.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: eucho <eucho@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 21:30:03 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/11 21:30:03 by eucho         ########   odam.nl         */
+/*   Created: 2022/10/11 21:30:30 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:30 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../headers/ft_printf.h"
-#include"../headers/libft.h"
+#include"ft_printf.h"
 
-int ft_print_number(int n)
+void	ft_putstr(char *str)
 {
-    int     len;
-    char    *num;
+	int	i;
 
-    len = 0;
-    num = ft_itoa(n);
-    len = ft_print_string(num);
-    free(num);
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+}
 
-    return(len);
+int	ft_print_str(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		ft_putstr("NULL");
+		return (0);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }

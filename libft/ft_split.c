@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:10:04 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/11 19:46:13 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:30:16 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 		NULL if the allocation fails.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 size_t	word_counter(char const *s, char c)
 {
@@ -39,15 +40,29 @@ size_t	word_counter(char const *s, char c)
 	return (count);
 }
 
+void	*free_pointer_array(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t		i;
-	const char	*start;
-	char		**str;
+	unsigned int	i;
+	const char		*start;
+	char			**str;
 
 	if (!s)
 		return (NULL);
-	str = (char **)malloc(sizeof(*str) * word_counter(s, c) + 1);
+	str = (char **)malloc(sizeof(*str) * (word_counter(s, c) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -59,7 +74,10 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		if (*(s - 1) != c)
-		str[i++] = ft_substr(start, 0, s - start);
+			str[i++] = ft_substr(start, 0, s - start);
+		if (i)
+			if (str[i - 1] == NULL)
+				return (free_pointer_array(str - (i - 1)));
 	}
 	str[i] = 0;
 	return (str);

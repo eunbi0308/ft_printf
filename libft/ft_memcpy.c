@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:08:57 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/11 19:19:46 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:27:56 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 		const means readonly.
 	
 	RETURN VALUE
-		A pointer to the desination.
+		A pointer to the destination.
 */
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

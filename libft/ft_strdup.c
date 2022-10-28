@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:10:21 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:10:23 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:30:37 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 		followed by a byte with value zero.   
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
-	unsigned int	size;
-	char			*str;
+	size_t	size;
+	char	*str;
 
 	size = ft_strlen(s1) + 1;
 	str = (char *)malloc(size);

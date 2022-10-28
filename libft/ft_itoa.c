@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:05:38 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:16:56 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 11:40:05 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 		returns converted string. 
 */
 #include "libft.h"
+#include <stdlib.h>
 
 static int	get_len(int n)
 {
@@ -27,7 +28,7 @@ static int	get_len(int n)
 		len = 1;
 	else
 		len = 0;
-	while (n)
+	while (n != 0)
 	{
 		n = n / 10;
 		len++;
@@ -37,9 +38,9 @@ static int	get_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int			len;
-	char		*str;
-	long long	num;
+	int		len;
+	char	*str;
+	int		num;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

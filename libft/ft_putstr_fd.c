@@ -6,11 +6,12 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:09:57 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:09:59 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:29:20 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

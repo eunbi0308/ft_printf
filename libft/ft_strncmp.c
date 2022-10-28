@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:06 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:21:39 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:33:37 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 		by '*s1' are less than, equal to, or greater than the first 'n' characters
 		of the object pointed to by '*s2'.
 */
-#include "libft.h"
+#include <stdlib.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

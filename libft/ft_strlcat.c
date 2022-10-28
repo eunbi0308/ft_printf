@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:11:18 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:11:20 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:31:12 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@
 		the result string will be between the initial length of 'dst' and 'size'. 
 		The zero at the end of the string is included. This function is mainly 
 		used to avoid oversize of the character array.
+		if size < dst, returns strlen(src) + size
+		if size > dst, returns strlen(src) + strlen(dst)
 	RETURN VALUE
 		returns the total length of the string strlcat() tried to create.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

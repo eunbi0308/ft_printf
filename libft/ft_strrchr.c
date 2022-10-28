@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:19 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:22:24 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/17 13:50:49 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = ft_strlen(s) + 1;
 	while (i > 0)

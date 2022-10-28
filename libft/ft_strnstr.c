@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:13 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:21:56 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:33:45 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 		'*little' is returned.
 */
 #include "libft.h"
-#include<limits.h>
+#include <stdlib.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -32,10 +32,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
-	if (len > LONG_MAX)
-		len = ft_strlen(big);
+	if (!*big)
+		return (NULL);
 	little_len = ft_strlen(little);
-	while (i < len)
+	while (i < len && *big)
 	{
 		if (ft_strncmp(big, little, little_len) == 0)
 		{

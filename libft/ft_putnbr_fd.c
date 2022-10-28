@@ -6,11 +6,12 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:09:48 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:09:51 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:29:06 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

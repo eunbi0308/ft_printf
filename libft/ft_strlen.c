@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:11:36 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:11:38 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:38:43 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	RETURN VALUE
 		The length of the given string.
 */
-#include "libft.h"
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s)
 {

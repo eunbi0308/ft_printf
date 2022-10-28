@@ -1,43 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_print_string.c                                  :+:    :+:            */
+/*   ft_print_percent.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: eucho <eucho@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 21:30:30 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/11 21:30:30 by eucho         ########   odam.nl         */
+/*   Created: 2022/10/11 21:30:14 by eucho         #+#    #+#                 */
+/*   Updated: 2022/10/11 21:30:14 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/ft_printf.h"
+#include"ft_printf.h"
 
-void    ft_putstr(char *str)
+int	ft_print_percent(void)
 {
-    int i;
-    
-    i = 0;
-    while (str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
-}
-
-int ft_print_str(char *str)
-{
-    int i;
-
-    i = 0;
-    if (!str)
-    {
-        ft_putstr("NULL");
-        return (0);
-    }
-    while (str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
-    return(i);
+	write(1, "%", 1);
+	return (1);
 }

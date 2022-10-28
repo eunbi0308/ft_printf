@@ -6,11 +6,9 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:41 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:12:43 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:34:41 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

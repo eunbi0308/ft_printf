@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:11:41 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:11:54 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:33:29 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 		Returns NULL if the allocation fails.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

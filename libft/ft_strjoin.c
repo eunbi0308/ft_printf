@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:11:10 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:11:13 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 11:05:50 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 		A pointer of the joined string.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -24,8 +25,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	len_2;
 	char			*str;
 
-	if (!s1 || !s2)
-		return (NULL);
 	len_1 = ft_strlen(s1);
 	len_2 = ft_strlen(s2);
 	str = (char *)malloc(sizeof(char) * (len_1 + len_2 + 1));

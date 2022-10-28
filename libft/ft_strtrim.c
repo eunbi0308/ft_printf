@@ -6,35 +6,35 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:24 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/10 16:22:28 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:34:00 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	DESCRIPTION
-		strtrim() removes all whitespace characters from the beginning and 
-		the end of a string.
+		strtrim() allocates and returns a copy of '*s1' with tha characters
+		specified in '*set' removed from the beginning and the end of the string.
 	RETURN VALUE
-		returns its argument.
+		returns the trimmed string.
+		NULL ig the allocation failed.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	front;
-	size_t	back;
+	int		front;
+	int		back;
 	char	*str;
 
 	str = 0;
-	if (!s1)
-		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
 	front = 0;
 	back = ft_strlen(s1);
 	while (s1[front] && ft_strchr(set, s1[front]))
 		front++;
-	while (s1[back - 1] && ft_strchr(set, s1[back - 1]) && back > front)
+	while (back > front && ft_strchr(set, s1[back - 1]))
 		back--;
 	str = (char *)malloc(sizeof(char) * (back - front + 1));
 	if (!str)
