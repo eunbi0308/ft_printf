@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:13 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/24 15:33:45 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/31 09:39:08 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 		'*little' is returned.
 */
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

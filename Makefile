@@ -5,6 +5,7 @@ CFLAGS		= -Wall -Wextra -Werror
 OBJ_DIR		= obj/
 PRINT_DIR	= print
 LIBFT		= libft
+HEADER		= ft_printf.h
 
 FORMATS	= ft_print_char.c ft_print_hex.c ft_print_number.c ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
 
@@ -16,14 +17,13 @@ all: $(NAME)
 
 $(NAME):	$(OBJ)
 			@cd ./$(LIBFT) && make
-			@echo "-- Libft is compiled --"
 			@cp $(LIBFT)/libft.a .
 			@mv libft.a $(NAME)
 			@ar -rcs $(NAME) $(OBJ)
-			@echo "-- Printf is compiled --"
+			@echo "- ft_printf is compiled -"
 
-$(OBJ_DIR)%.o: %.c | $(OBJF)
-			$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ_DIR)%.o: %.c $(HEADER)| $(OBJF)
+			@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJF):
 		@mkdir -p $(OBJ_DIR)

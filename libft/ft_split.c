@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:10:04 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/24 15:30:16 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/31 09:38:28 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 		NULL if the allocation fails.
 */
 #include "libft.h"
-#include <stdlib.h>
 
 size_t	word_counter(char const *s, char c)
 {
