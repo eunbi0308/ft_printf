@@ -6,16 +6,11 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 21:30:23 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/28 18:50:42 by eucho         ########   odam.nl         */
+/*   Updated: 2022/11/20 20:36:40 by eunbi         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int	ft_pointer_len(uintptr_t n)
 {
@@ -46,7 +41,7 @@ void	ft_put_pointer(uintptr_t n)
 	}
 }
 
-int	ft_print_ptr(uintptr_t ptr)
+int	ft_print_pointer(uintptr_t ptr)
 {
 	int	len;
 

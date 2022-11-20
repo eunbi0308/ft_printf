@@ -1,11 +1,10 @@
-#include <stdio.h>
 #include "ft_printf.h"
-#include "libft/libft.h"
+#include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	ft_printf("%c\n", 'A');
-	printf("%s\n", "Original printf : ");
+    ft_printf("%s\n", "cspdiuxX%");
+    printf("%s\n", "cspdiuxX%");
 
-	return(0);
+    return(0);
 }

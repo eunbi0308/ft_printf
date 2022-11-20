@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:05:38 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/31 09:37:59 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 11:40:05 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 		returns converted string. 
 */
 #include "libft.h"
-
+#include <stdlib.h>
 
 static int	get_len(int n)
 {

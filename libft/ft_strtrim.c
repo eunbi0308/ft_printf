@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:12:24 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/31 09:39:14 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:34:00 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 		NULL ig the allocation failed.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

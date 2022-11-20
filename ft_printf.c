@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
 
 int	ft_formats(va_list args, const char format)
 {

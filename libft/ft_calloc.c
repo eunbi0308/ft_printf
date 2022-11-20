@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:03:14 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/31 09:37:49 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/24 15:24:56 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 		size  : The size of bytes in each object.
 */
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

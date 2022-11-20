@@ -3,11 +3,11 @@ NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 OBJ_DIR		= obj/
+HEADER		= ft_printf.h
 PRINT_DIR	= print
 LIBFT		= libft
-HEADER		= ft_printf.h
 
-FORMATS	= ft_print_char.c ft_print_hex.c ft_print_number.c ft_print_pointer.c ft_print_string.c ft_print_unsigned.c
+FORMATS	= ft_printf.c ft_print_char.c ft_print_hex.c ft_print_number.c ft_print_pointer.c ft_print_string.c ft_print_unsigned.c ft_print_percent.c
 
 OBJ	= $(addprefix $(OBJ_DIR), $(FORMATS:.c=.o))
 
@@ -20,7 +20,7 @@ $(NAME):	$(OBJ)
 			@cp $(LIBFT)/libft.a .
 			@mv libft.a $(NAME)
 			@ar -rcs $(NAME) $(OBJ)
-			@echo "- ft_printf is compiled -"
+			@echo "- Printf is compiled -"
 
 $(OBJ_DIR)%.o: %.c $(HEADER)| $(OBJF)
 			@$(CC) $(CFLAGS) -c $< -o $@

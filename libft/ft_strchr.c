@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:10:10 by eucho         #+#    #+#                 */
-/*   Updated: 2022/10/31 09:38:34 by eucho         ########   odam.nl         */
+/*   Updated: 2022/10/25 10:20:14 by eucho         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 		Returns a pointer to the first occurrence of the character 'c' in 's'. 
 */
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strchr(const char *s, int c)
 {
