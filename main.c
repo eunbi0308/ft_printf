@@ -3,8 +3,11 @@
 
 int main(void)
 {
-    ft_printf("%s\n", "cspdiuxX%");
-    printf("%s\n", "cspdiuxX%");
+    void *p;
+
+    printf("%p\n", &p);
+    printf("%p\n", &p);
+    ft_printf("%p\n", &p);
 
     return(0);
 }
