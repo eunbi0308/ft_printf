@@ -12,17 +12,12 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	ft_hex_len(unsigned int num)
 {
 	int	len;
 
 	len = 0;
-	while (num != 0)
+	while (num > 0)
 	{
 		len++;
 		num = num / 16;
@@ -39,7 +34,7 @@ void	ft_put_hex(unsigned int num, const char format)
 	}
 	else
 	{
-		if (num <= 9)
+		if (num < 10)
 			ft_putchar(num + '0');
 		else
 		{

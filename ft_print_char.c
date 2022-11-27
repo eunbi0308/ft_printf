@@ -11,8 +11,13 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
-int	ft_print_char(int c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	ft_print_char(int c)
+{
+	ft_putchar(c);
 	return (1);
 }

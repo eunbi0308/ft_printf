@@ -6,7 +6,7 @@
 /*   By: eucho <eucho@student.42.fr>                  +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 21:30:23 by eucho         #+#    #+#                 */
-/*   Updated: 2022/11/27 18:57:23 by eunbi         ########   odam.nl         */
+/*   Updated: 2022/11/27 19:53:52 by eunbi         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,6 @@ void	ft_to_hex(uintptr_t n)
 	}
 }
 
-int	ft_pointer_len(uintptr_t n)
-{
-	int	len;
-
-	len = 0;
-	while (n > 0)
-	{
-		len++;
-		n = n / 16;
-	}
-	return (len);
-}
-
 int	ft_print_pointer(uintptr_t ptr)
 {
 	int	len;
@@ -54,7 +41,7 @@ int	ft_print_pointer(uintptr_t ptr)
 	else
 	{
 		ft_to_hex(ptr);
-		len += ft_pointer_len(ptr);
+		len += ft_hex_len(ptr);
 	}
 	return (len);
 }

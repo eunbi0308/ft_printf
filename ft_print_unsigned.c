@@ -14,36 +14,36 @@
 #include <unistd.h>
 #include "ft_printf.h"
 
-int	ft_num_len(unsigned int num)
+static int	unsigned_get_len(unsigned int num)
 {
 	unsigned int	len;
 
 	len = 0;
 	while (num)
 	{
-		len++;
 		num = num / 10;
+		len++;
 	}
 	return (len);
 }
 
 char	*ft_unsigned_itoa(unsigned int n)
 {
-	char			*unsigned_num;
+	char			*str;
 	unsigned int	len;
 
-	len = ft_num_len (n);
-	unsigned_num = (char *)malloc(sizeof(char) * (len + 1));
-	if (!unsigned_num)
-		return (0);
-	unsigned_num[len] = '\0';
-	while (n)
+	len = unsigned_get_len(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	while (n >= 0)
 	{
-		unsigned_num[len - 1] = n % 10 + '0';
+		str[len - 1] = '0' + (n % 10);
 		n = n / 10;
 		len--;
 	}
-	return (unsigned_num);
+	return (str);
 }
 
 int	ft_print_unsigned(unsigned int n)
