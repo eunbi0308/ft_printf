@@ -3,11 +3,12 @@
 
 int main(void)
 {
-    void *p;
+    char *s;
 
-    printf("%p\n", &p);
-    printf("%p\n", &p);
-    ft_printf("%p\n", &p);
+    s = 0;
+    ft_printf("%s\n", s);
+    //printf("%s\n", s);
+    //ft_printf("%p\n", &p);
 
     return(0);
 }
