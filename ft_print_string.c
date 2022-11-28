@@ -17,6 +17,11 @@ int	ft_print_string(char *str)
 	int	i;
 
 	i = 0;
+	if (str == NULL)
+	{
+		ft_print_string("(null)");
+		return (6);
+	}
 	while (str[i])
 	{
 		write(1, &str[i], 1);
