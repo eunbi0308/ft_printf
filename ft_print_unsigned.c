@@ -53,11 +53,11 @@ int	ft_print_unsigned(unsigned int n)
 
 	len = 0;
 	if (n == 0)
-		write(1, "0", 1);
+		len = write(1, "0", 1);
 	else
 	{
 		unsigned_num = ft_unsigned_itoa(n);
-		len = len + ft_print_string(unsigned_num);
+		len += ft_print_string(unsigned_num);
 		free(unsigned_num);
 	}
 	return (len);

@@ -18,19 +18,21 @@ int	ft_formats(va_list ap, const char format)
 
 	len = 0;
 	if (format == 'c')
-		len = len + ft_print_char(va_arg(ap, int));
+		len += ft_print_char(va_arg(ap, int));
 	else if (format == 's')
-		len = len + ft_print_string(va_arg(ap, char *));
+		len += len + ft_print_string(va_arg(ap, char *));
 	else if (format == 'p')
-		len = len + ft_print_pointer(va_arg(ap, uintptr_t));
+		len += len + ft_print_pointer(va_arg(ap, uintptr_t));
 	else if (format == 'd' || format == 'i')
-		len = len + ft_print_number(va_arg(ap, int));
+		len += len + ft_print_number(va_arg(ap, int));
 	else if (format == 'u')
-		len = len + ft_print_unsigned(va_arg(ap, unsigned int));
+		len += ft_print_unsigned(va_arg(ap, unsigned int));
 	else if (format == 'x' || format == 'X')
-		len = len + ft_print_hex(va_arg(ap, unsigned int), format);
+		len += ft_print_hex(va_arg(ap, unsigned int), format);
 	else if (format == '%')
-		len = len + ft_print_percent();
+		len += ft_print_percent();
+	else
+		len += ft_print_char(format);
 	return (len);
 }
 
