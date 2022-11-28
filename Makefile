@@ -20,7 +20,7 @@ $(NAME):	$(OBJ)
 			@cp $(LIBFT)/libft.a .
 			@mv libft.a $(NAME)
 			@ar -rcs $(NAME) $(OBJ)
-			@echo "- Printf is compiled -"
+			@echo "- ft_printf is compiled -"
 
 $(OBJ_DIR)%.o: %.c $(HEADER)| $(OBJF)
 			@$(CC) $(CFLAGS) -c $< -o $@

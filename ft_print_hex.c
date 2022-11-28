@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_printf.h"
 
 int	ft_hex_len(unsigned int num)
 {

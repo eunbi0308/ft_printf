@@ -37,9 +37,9 @@ char	*ft_unsigned_itoa(unsigned int n)
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	while (n >= 0)
+	while (n)
 	{
-		str[len - 1] = '0' + (n % 10);
+		str[len - 1] = (n % 10) + '0';
 		n = n / 10;
 		len--;
 	}
