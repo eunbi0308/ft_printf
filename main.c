@@ -1,5 +1,6 @@
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -22,7 +23,8 @@ int	main(void)
 	printf("%s\n", "==[ Decimal ]==");
 	printf("%d %d", printf(" %d %i\n", 15, 20), ft_printf(" %d %i\n", 15, 20));
 	printf("\n\n");
-	
+	printf("%d %d", printf(" %d %i\n", INT_MAX, INT_MIN), ft_printf(" %d %i\n", INT_MAX, INT_MIN));
+	printf("\n\n");
 	printf(" %d %d %d %d %d\n", 0, 0, 0, 0, 0);
 	ft_printf(" %d %d %d %d %d\n\n", 0, 0, 0, 0, 0);
 
@@ -34,8 +36,10 @@ int	main(void)
 	printf("%d %d", printf(" %p\n", &p), ft_printf(" %p\n", &p));
 	printf("\n\n");
 
-	printf("%s\n", "==[ string ]==");
+	printf("%s\n", "==[ String ]==");
 	printf("%d %d", printf(" %s\n", s), ft_printf(" %s\n", s));
+	printf("\n\n");
+	printf("%d %d", printf(" %s\n", 0), ft_printf(" %s\n", 0));
 	printf("\n\n");
 
 	printf("%d %d", printf(" %s\n", NULL), ft_printf(" %s\n", NULL));

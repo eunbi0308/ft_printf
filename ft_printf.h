@@ -29,13 +29,12 @@ int		ft_print_percent(void);
 
 void	ft_putchar(char c);
 
-void	ft_put_pointer(uintptr_t num);
-int		ft_pointer_len(uintptr_t num);
-
-void	ft_put_hex(unsigned int num, const char format);
 int		ft_hex_len(unsigned int num);
+void	ft_put_hex(unsigned int num, const char format);
+
+int		ft_pointer_len(uintptr_t num);
+void	ft_to_hex(uintptr_t n);
 
 char	*ft_unsigned_itoa(unsigned int n);
-int		ft_num_len(unsigned int num);
 
 #endif
