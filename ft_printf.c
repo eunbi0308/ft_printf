@@ -20,11 +20,11 @@ int	ft_formats(va_list ap, const char format)
 	if (format == 'c')
 		len += ft_print_char(va_arg(ap, int));
 	else if (format == 's')
-		len += len + ft_print_string(va_arg(ap, char *));
+		len += ft_print_string(va_arg(ap, char *));
 	else if (format == 'p')
-		len += len + ft_print_pointer(va_arg(ap, uintptr_t));
+		len += ft_print_pointer(va_arg(ap, uintptr_t));
 	else if (format == 'd' || format == 'i')
-		len += len + ft_print_number(va_arg(ap, int));
+		len += ft_print_number(va_arg(ap, int));
 	else if (format == 'u')
 		len += ft_print_unsigned(va_arg(ap, unsigned int));
 	else if (format == 'x' || format == 'X')
