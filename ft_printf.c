@@ -49,13 +49,13 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
+			if (str[i + 1] == '\0')
+				break ;
 			len += ft_formats (ap, str[i + 1]);
 			i++;
 		}
 		else
-		{
 			len += ft_print_char (str[i]);
-		}
 		i++;
 	}
 	va_end (ap);

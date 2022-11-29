@@ -57,11 +57,12 @@ int	main(void)
 	printf(" aaaaaa%caaaaaa%daaaa\n", 'A', 8);
 	ft_printf(" aaaaaa%caaaaaa%daaaa\n\n", 'A', 8);
 
-	printf(" aaa%\n");
-	ft_printf(" aaa%\n\n");
-
 	printf(" aa%bb%%cc\n");
 	ft_printf(" aa%bb%%cc\n\n");
+	
+	printf("%s\n", "==[ seg.fault check ]==");
+	printf(" aa%");
+	ft_printf(" aa%");
 
 	return(0);
 }
